@@ -1,0 +1,19 @@
+<headr class = "heads">
+    <div class = "logo">
+          <%= link_to "Title",root_path, id:"logo" %>
+    </div>
+    <div class = "head-menu">
+        <ul>
+            <% if logged_in? %>
+             <li><%= link_to "Category", '#' %></li>
+             <li><%= link_to "New Table",table_path%></li>
+             <li><%= link_to "MY PAGE", user_url(current_user) %></li>
+             <li><%= link_to "Room", roomhome_path %></li>
+            <% else %>
+              <li><%= link_to "New User",signup_path%></li>
+              <li><%= link_to "Log in", login_path %></li>
+            <% end %>
+
+        </ul >
+    </div>
+</headr>

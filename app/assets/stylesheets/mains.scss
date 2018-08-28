@@ -1,0 +1,95 @@
+// Place all the styles related to the Mains controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.body-main {
+    margin: 0px;
+    padding: 0px;
+    width:100%;
+    height:800px;
+    float: left;
+    position:relative;
+    h1{
+        height:auto;
+        width:900px;
+        text-align: center;
+        font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
+        font-size:300%;
+        font-style: inherit;
+        color: blue;
+        margin: auto;
+        padding:auto;
+        position:absolute;
+        top: 40%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+
+    }
+    h3 {
+        height:auto;
+        width:700px;
+        text-align: center;
+        font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
+        font-size:150%;
+        font-style: inherit;
+        color: blue;
+        margin: 10px auto auto auto;
+        padding:auto;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+
+    }
+}
+/*.body-menu {
+    margin: 0px;
+    padding: 0%;
+    width:30%;
+    height:800px;
+    float: left;
+    font-family: 'Bodoni 72','Calibri','Bodoni 72',sans-serif;
+    font-size:150%;
+    font-style: inherit;
+    border-radius: 0px 0px 10px 10px;
+    h2{
+        a{
+            width:inherit;
+            float: left;
+            font-family: 'Bodoni 72','Calibri','Bodoni 72',sans-serif;
+            font-style: inherit;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+}*/
+
+ 
+/* mixins, variables, etc. */
+ 
+$gray-medium-light: #eaeaea;
+ 
+@mixin box_sizing {
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing:         border-box;
+}
+
+/* miscellaneous */
+ 
+.debug_dump {
+   clear: both;
+   float: left;
+   width: 100%;
+   margin-top: 45px;
+   @include box_sizing;
+}

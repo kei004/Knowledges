@@ -1,0 +1,187 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.row{
+    height:auto;
+    margin: 5% auto;
+    padding: auto;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    .col-md-6 {
+        height: auto;
+        margin: 10% auto; 
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.1), -5px -5px 5px -2px #6d95ce inset;
+    }
+    .col-md-4{
+        width: 100%;
+        height: inherit;
+        margin: 0%;
+        padding: 0%;
+        .user_info {
+            width: inherit;
+            height: inherit;
+            margin: 2% 0% 0% 0%;
+            padding: 0%;
+            position: relative;
+            .user-image h1 {
+                font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
+                font-size:300%;
+                font-style: inherit;
+                color: blue;
+            }
+            ul{
+                position: absolute;
+                top: 5%;
+                right: 0%;
+                -ms-transform: translate(0%,-5%);
+                -webkit-transform : translate(0%,-5%);
+                transform : translate(0%,-5%);
+                list-style: none;
+                margin: auto;
+                padding: auto;
+                font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
+                font-size:150%;
+                font-style: inherit;
+                color: blue;
+                a{
+                    margin: 0%;
+                    padding: 0%;
+                    text-decoration: none;
+                    color: blue;
+                    &:hover{
+                        color: darkblue;
+                    }
+                }
+                li .dropdown-menu {
+                    margin-top:40%; 
+                    padding: auto;
+                }
+            }
+        }
+    }
+}
+#mypages{
+    margin: 10% auto ;
+    padding: 0%;
+    width:90%;
+    height:600px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 4px rgba(0,0,0,0.1), -5px -5px 5px -2px #6d95ce inset;
+
+    display:flex;
+    justify-content: center;
+    color: blue;
+    .mybox {
+        margin: 0%;
+        padding:0%;
+        height: inherit;
+        font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
+        /*font-size:150%;*/
+        font-style: inherit;
+        color: blue;
+        width: 100%;
+        /*border: #6d95ce 2px solid;*/
+        h3 {
+            text-align: center;
+        }
+    }
+
+    /*.discuss {
+        padding:0px;
+        height: inherit;
+        width: 33%;
+        border: #6d95ce solid 2px;
+    }
+    .quastion{
+        padding:0%;
+        height: inherit;
+        width:33%;
+        border: #6d95ce solid 2px;
+    }
+    .note{
+        padding:0%;
+        height: inherit;
+        width:33%;
+        border: #6d95ce solid 2px;
+    }*/
+}
+
+/* sidebar */
+
+aside {
+    section.user_info {
+      margin-top: 20px;
+    }
+    section {
+      padding: 10px 0;
+      margin-top: 20px;
+      &:first-child {
+        border: 0;
+        padding-top: 0;
+      }
+      span {
+        display: block;
+        margin-bottom: 3px;
+        line-height: 1;
+      }
+      h1 {
+        font-size: 1.4em;
+        text-align: left;
+        letter-spacing: -1px;
+        margin-bottom: 3px;
+        margin-top: 0px;
+        color: blue;
+      }
+      .alert {
+        width:800px;
+        }
+    }
+}
+  
+.gravatar {
+    float: left;
+    margin-right: 10px;
+}
+  
+.gravatar_edit {
+    margin-top: 15px;
+}
+/* forms */
+
+@mixin box_sizing {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+}
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+}
+  
+.field_with_errors {
+    @extend .has-error;
+    .form-control {
+      color: $state-danger-text;
+    }
+}
