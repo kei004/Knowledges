@@ -1,6 +1,41 @@
-<div class = "main">
-    <div class = "body-main">
-        <h1>Diversified knowledge consolidation community</h1>
-        <h3>This site will provide opportunities you can Know the knowledge of many people and will help you with  to understanding the essence of things, deepening knowledge!</h3>
-    </div>
+<div class = "body-main">
+    <h1>Knowledge.</h1>
+    <h3>Diversified Knowledge Consolidation Community</h3>
+    <p>あなたの　知識　が きっかけ をつくる</p>
+    <ul>
+        <% if logged_in? %>
+        
+        <%else%>
+        <li><%= link_to "Sing up", signup_path %></li>
+        <li><%= link_to "Log in", login_path %></li>
+        <%end%>
+    </ul>
 </div>
+<div class = "contents">
+    <% if logged_in? %>
+        <div class = "contents-body">
+            <div class = "contents-menu">
+                <ul>
+                    <li>DISCUSSION</li>
+                    <li>QUESTION</li>
+                    <li>NOTE</li>
+                </ul>
+            </div>
+            <div class = "contents-main">
+            </div>  
+        </div>
+    <%else%>
+        <div class = "contents-body">
+            <div class = "contents-menu">
+                <ul>
+                    <li><%= link_to "DISCUSSION", discussion_path %></li>
+                    <li><%= link_to "QUESTION", question_path %></li>
+                    <li><%= link_to "NOTE", note_path %></li>
+                </ul>
+            </div>
+            <div class = "contents-main">
+            </div>  
+        </div>
+    <%end%>
+</div>
+    

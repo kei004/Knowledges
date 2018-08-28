@@ -5,13 +5,14 @@
     <div class = "head-menu">
         <ul>
             <% if logged_in? %>
-             <li><%= link_to "Category", '#' %></li>
-             <li><%= link_to "New Table",'#'%></li>
-             <li><%= link_to "MY PAGE", user_url(current_user) %></li>
-             <li><%= link_to "Room", roomhome_path %></li>
+             <li><%= link_to "HOME", root_path %></li>
+             <li><%= link_to "NY PAGE",user_url(current_user)%></li>
+             <li><%= link_to "ABOUT", about_path %></li>
+             <li><%= link_to "HELP", '#' %></li>
             <% else %>
-              <li><%= link_to "New User",signup_path%></li>
-              <li><%= link_to "Log in", login_path %></li>
+              <li><%= link_to "HOME",root_path%></li>
+              <li><%= link_to "ABOUT", about_path %></li>
+              <li><%= link_to "HELP", '#' %></li>
             <% end %>
 
         </ul >
