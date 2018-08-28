@@ -9,7 +9,6 @@ document.addEventListener 'turbolinks:load', ->
 
       received: (data) ->
         console.log("received OK")
-        alert data['message']
         $('#messages').append data['message']
 
       speak: (message)->

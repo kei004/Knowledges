@@ -9,11 +9,6 @@ Rails.application.routes.draw do
   get   '/signup',   to:'users#new'
   post   '/signup',   to:'users#create'
 
-  get   '/discuss',  to:'tolks#discuss'
-  get   '/quastion', to:'tolks#q'
-  get   'note',      to:'tolks#note'
-  get   '/table',    to:'tolks#table'
-
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

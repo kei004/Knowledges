@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 /* header */
 .logo  {
     width:40%;
@@ -126,6 +129,3 @@ body{
         }
     }
 }
-
-@import "bootstrap-sprockets";
-@import "bootstrap";

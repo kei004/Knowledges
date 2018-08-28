@@ -1,5 +1,6 @@
 <h1>Chat room</h1>
 User Email:<%= current_user.email %>
+User id <%= cookies.signed[:user_id]%>
 <div id="messages", data-room_id="<%= @room.id %>">
     <%= render @messages %>
 </div>

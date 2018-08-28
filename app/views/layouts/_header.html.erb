@@ -6,7 +6,7 @@
         <ul>
             <% if logged_in? %>
              <li><%= link_to "Category", '#' %></li>
-             <li><%= link_to "New Table",table_path%></li>
+             <li><%= link_to "New Table",'#'%></li>
              <li><%= link_to "MY PAGE", user_url(current_user) %></li>
              <li><%= link_to "Room", roomhome_path %></li>
             <% else %>
