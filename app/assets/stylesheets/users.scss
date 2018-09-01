@@ -5,7 +5,7 @@
 @import "bootstrap";
 .row{
     height:auto;
-    margin: 5% auto;
+    margin: 8% auto;
     padding: auto;
     width: 100%;
     display:flex;
@@ -14,104 +14,117 @@
         height: auto;
         margin: 10% auto; 
         padding: 20px;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.1), -5px -5px 5px -2px #6d95ce inset;
+        background: rgba(255, 255, 255, 0.829);
+        box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.1)
     }
     .col-md-4{
-        width: 100%;
+        width: 80%;
         height: inherit;
         margin: 0%;
         padding: 0%;
         .user_info {
-            width: inherit;
+            width: 100%;
             height: inherit;
-            margin: 2% 0% 0% 0%;
-            padding: 0%;
+            margin: 10px auto;
+            padding: 0;
             position: relative;
-            .user-image h1 {
-                font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
-                font-size:300%;
-                font-style: inherit;
-                color: blue;
+            .user-image {
+                margin-left: 30px;
+                padding: 0;
+                h1 {
+                    
+                    font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
+                    font-size:80px;
+                    font-style: inherit;
+                    color:white;
+                }
             }
             ul{
                 position: absolute;
-                top: 5%;
-                right: 0%;
-                -ms-transform: translate(0%,-5%);
-                -webkit-transform : translate(0%,-5%);
-                transform : translate(0%,-5%);
+                top: 30px;
+                right: 5%;
+                float: right;
                 list-style: none;
-                margin: auto;
-                padding: auto;
-                font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
-                font-size:150%;
+                padding: 0;
+                font-family: 'Arial', sans-serif;
+                font-size:25px;
                 font-style: inherit;
-                color: blue;
                 a{
-                    margin: 0%;
-                    padding: 0%;
+                    margin: 0;
+                    padding: 0;
                     text-decoration: none;
-                    color: blue;
+                    color:whitesmoke;
                     &:hover{
                         color: darkblue;
                     }
                 }
                 li .dropdown-menu {
-                    margin-top:40%; 
-                    padding: auto;
+                    padding: 0;
+                    margin-top: 12px;
                 }
+            }
+
+            #mypages{
+                margin: 50px auto ;
+                padding: 0;
+                width:95%;
+                height:600px;
+                background: white;
+                box-shadow: 2px 2px 10px 4px rgba(0,0,0,0.3);
+            
+                display:flex;
+                justify-content: center;
+                color: blue;
+                .mybox {
+                    margin: 0;
+                    padding:0;
+                    height: inherit;
+                    width: 100%;
+                    .box-top{
+                        margin: auto;
+                        padding:auto;
+                        height:70px;
+                        p {
+                            height: inherit;
+                            padding-top: 20px;
+                            padding-bottom:0; 
+                            font-family: 'Arial',  sans-serif;
+                            font-size:30px;
+                            font-style: inherit;
+                            color: blue;
+                            text-align: center;
+                        }
+                    }
+                    .box-main {
+                        margin: auto;
+                        padding: auto;
+                        height:530px;
+                    }
+                }
+            
+                /*.discuss {
+                    padding:0px;
+                    height: inherit;
+                    width: 33%;
+                    border: #6d95ce solid 2px;
+                }
+                .quastion{
+                    padding:0%;
+                    height: inherit;
+                    width:33%;
+                    border: #6d95ce solid 2px;
+                }
+                .note{
+                    padding:0%;
+                    height: inherit;
+                    width:33%;
+                    border: #6d95ce solid 2px;
+                }*/
             }
         }
     }
 }
-#mypages{
-    margin: 10% auto ;
-    padding: 0%;
-    width:90%;
-    height:600px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px 4px rgba(0,0,0,0.1), -5px -5px 5px -2px #6d95ce inset;
 
-    display:flex;
-    justify-content: center;
-    color: blue;
-    .mybox {
-        margin: 0%;
-        padding:0%;
-        height: inherit;
-        font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
-        /*font-size:150%;*/
-        font-style: inherit;
-        color: blue;
-        width: 100%;
-        /*border: #6d95ce 2px solid;*/
-        h3 {
-            text-align: center;
-        }
-    }
-
-    /*.discuss {
-        padding:0px;
-        height: inherit;
-        width: 33%;
-        border: #6d95ce solid 2px;
-    }
-    .quastion{
-        padding:0%;
-        height: inherit;
-        width:33%;
-        border: #6d95ce solid 2px;
-    }
-    .note{
-        padding:0%;
-        height: inherit;
-        width:33%;
-        border: #6d95ce solid 2px;
-    }*/
-}
 
 /* sidebar */
 

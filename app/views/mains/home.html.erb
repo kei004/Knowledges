@@ -13,12 +13,19 @@
 </div>
 <div class = "contents">
     <% if logged_in? %>
+        
+        <div class = "rooms">
+            <ul>
+                <li class = "makeroom"><%= link_to "作成", '/roomhome' %></li>
+                <li class = "watchroom"><%= link_to "観覧", '#' %></li>
+            </ul>
+        </div>
         <div class = "contents-body">
             <div class = "contents-menu">
                 <ul>
                     <li>DISCUSSION</li>
                     <li>QUESTION</li>
-                    <li>NOTE</li>
+                    <!--<li>NOTE</li>-->
                 </ul>
             </div>
             <div class = "contents-main">
@@ -30,7 +37,7 @@
                 <ul>
                     <li><%= link_to "DISCUSSION", discussion_path %></li>
                     <li><%= link_to "QUESTION", question_path %></li>
-                    <li><%= link_to "NOTE", note_path %></li>
+                    <!--<li><%= link_to "NOTE", note_path %></li>-->
                 </ul>
             </div>
             <div class = "contents-main">

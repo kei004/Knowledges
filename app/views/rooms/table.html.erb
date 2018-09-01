@@ -1,8 +1,38 @@
-<div>
+<div class = "Room-body">
   <ul>
     <% @rooms.each do |room| %>
       <li><%=link_to "ROOM#{room.id}", "/rooms/#{room.id}/" %><p><%= "/rooms/room_#{room.id}"%></p></li>
     <% end %>
   </ul>
-  <li><%=link_to "NEW ROOM", "/rooms/new" %></li>
+  <!--<li><%=link_to "NEW ROOM", "/rooms/new" %></li>-->
+  <div class = "room-form">
+    <%= form_for(:room, url: mkroom_path) do |f| %>
+
+      <%= f.label :種類 %>
+      <%= f.select :atter, [["議論", 1], ["質問", 2]],  :prompt => "選択してください"  %>
+
+
+      <%= f.label :タイトル %>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'タイトル'%>
+
+      <%= f.label :選択肢 %>
+      <div class = "choice">
+        <%= f.text_field :choice_first, class: 'form-control', placeholder: '賛成'%>
+        <%= f.text_field :choice_second, class: 'form-control', placeholder: '反対'%>
+      </div>
+
+      <%= f.label :内容 %>
+      <%= f.text_area :contents, class: 'form-control', placeholder: '具体的な議論内容'%>
+
+      <%= f.label :タグ %>
+      <%= f.text_field :tag, class: 'form-control', placeholder: 'タグ'%>
+
+      <%= f.label :決まりごと %>
+      <%= f.text_area :rule, class: 'form-control', placeholder: 'ルール'%>
+
+
+      <%= f.submit "Create", class: "btn btn-primary" %>
+      
+    <% end %>
+  </div>
 </div>

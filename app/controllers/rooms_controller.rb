@@ -15,8 +15,25 @@ class RoomsController < ApplicationController
   end
 
   def new
-    Room.create()
-    redirect_to roomhome_path
+    @room = Room.create(room_params)
+    if @room.atter == 1 
+      redirect_to discussion_path
+    elsif @room.atter == 2
+      redirect_to question_path
+    else
+      redirect_to roomhome_path
+    end
+  end
+
+  def create
+    @room = Room.create(room_params)
+    if @room.atter == 1 
+      redirect_to roomhome_path
+    elsif @room.atter == 2
+      redirect_to question_path
+    else
+      redirect_to roomhome_path
+    end
   end
 
   def discuss
@@ -34,5 +51,9 @@ class RoomsController < ApplicationController
     end
   end
 
+  private
+    def room_params
+      params.require(:room).permit(:atter, :title, :choice_first,:choice_second,:contents,:tag,:rule)
+    end
 
 end
