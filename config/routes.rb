@@ -14,12 +14,11 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
-  resource :category do
-    resources :rooms
-  end
+  resource :categorys 
+  resources :rooms
   get 'rooms/new'
   post 'mkroom', to:'rooms#create'
-  get 'rooms/:room_id' => 'rooms#show'
+  get 'rooms/:room_id' => 'rooms#discuss'
   get 'rooms/home'
 
   get '/note',        to:'rooms#note'
