@@ -10,6 +10,7 @@ document.addEventListener 'turbolinks:load', ->
       received: (data) ->
         console.log("received OK")
         $('#messages').append data['message']
+        $('#chat-contents').animate({scrollTop: $('#chat-contents')[0].scrollHeight}, 'fast');
 
       speak: (message)->
         @perform 'speak', message: message #@perform 'speak'でRoomChannelのspeakアクションが呼ばれる

@@ -1,11 +1,32 @@
-<h1>Chat room</h1>
-User Email:<%= @user.email %>
-<div id="messages", data-room_id="<%= @room.id %>">
-    Room No.<%= @room.id %>
-    <%= render @messages %>
+<div class = "chatroom">
+    <h1><%=@room.title%></h1><h3>Room No.<%= @room.id %></h3>
+    <div class = "chat-body" >
+        <div id = "chat-atter">
+            <ul>トーク参加者
+             <% @users.each do |user| %>
+                <li>   <%= user.name %></li>
+             <% end %>
+            </ul>
+            <div id = "choice-form">
+                <form>
+                 <label>Button</label><br>
+                 <input class="statusbutton" type="button"  valu="1" value="<%=@room.choice_first%>" data-behavior="room_status">
+                 <input class="statusbutton" type="button"  valu="2" value="<%=@room.choice_second%>" data-behavior="room_status">
+        
+                </form>
+            </div>
+        </div>
+        <div id = "chat-contents">
+            <div id="messages", data-room_id="<%= @room.id %>">
+                <div class = "messages-main">
+                    <%= render @messages %>
+                </div>
+            </div>
+        </div>
+        <div id = "chat-form">
+         <form>
+          <input class="textbutton" type="text" data-behavior="room_speaker">
+         </form>
+        </div>
+    </div>
 </div>
-
-<form>
-<label>post</label><br>
-<input type="text" data-behavior="room_speaker">
-</form>

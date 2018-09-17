@@ -1,11 +1,7 @@
-<h1>Chat room</h1>
-User Email:<%= @user.email %>
-<div id="messages", data-room_id="<%= @room.id %>">
-    Room No.<%= @room.id %>
-    <%= render @messages %>
+<div id = "rooms-menu">
+    <ul><h1>ルーム一覧</h1>
+        <% @rooms.each do |room| %>
+        <li><%=link_to "#{room.title}", "/rooms/#{room.id}/" %><p><%= "/rooms/room_#{room.id}"%></p></li>
+        <% end %>
+    </ul>
 </div>
-
-<form>
-<label>post</label><br>
-<input type="text" data-behavior="room_speaker">
-</form>

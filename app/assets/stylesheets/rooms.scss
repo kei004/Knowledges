@@ -5,9 +5,11 @@
 @import "bootstrap";
 
 .Room-body {
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:50px 0px 0px 0px;
     width:100%;
+    height: 700px;
+    float: left;
     .room-form {
         width:50%;
         margin:auto;
@@ -34,21 +36,113 @@
 
 }
 
+.chatroom {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px auto;
+    .chat-body {
+        height: 735px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        #chat-atter{
+            width: 20%;
+            margin: 0px;
+            padding: auto;
+            height: inherit;
+            float: left;
+            #choice-form {
+                width: 100%;
+                margin: auto;
+                padding: auto;
+                background: #bbb;
+                display: inline-flex;
+                form {
+                    background: white;
+                    width: 100%;
+                    height: 80px;
+                    padding-left:25%; 
+                }
+                .statusbutton{
+                    
+                    border: 1px solid rgb(243, 4, 4);
+                    width: 20%;
+                    height: 50px;
+                    border-radius: 8px;
+                    margin: auto auto auto 40px;
+                    padding: auto;
+                    color: aqua;
+                }
+            }
+        }
+        #chat-contents {
+            float: right;
+            width: 77%;
+            background:whitesmoke;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            
+            margin: 10px 10px 0px 10px;
+            padding: 10px 20px;
+            overflow:auto;
+            height: 680px;
+            -webkit-overflow-scrolling: touch;
+            #messages {
+                
+                width: 100%;
+                height: 100%;
+                .messages-main {
+                    width: 100%;
+                }
+            }
+        }
+        #chat-form {
+            width: 77%;
+            margin: auto 10px;
+            padding: auto;
+            height: 40px;
+            background: white;
+            float:right;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            .textbutton {
+                width:90%;
+                height: 30px;
+                float:right;
+                margin: 5px 2px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+#rooms-menu {
+    width:100%;
+    height: 700px;
+    float: left;
+    margin: 0%;
+    padding:30px 0px 0px 0px;
+}
 
 @mixin box_sizing {
     -moz-box-sizing:    border-box;
     -webkit-box-sizing: border-box;
     box-sizing:         border-box;
 }
-input, textarea, select, .uneditable-input {
+/*input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
-}
-
-input {
-  height: auto !important;
+}*/
+.btn, .form-control, select{
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
+    input {
+        height: auto !important;
+    }
 }
 
 #error_explanation {
@@ -65,3 +159,10 @@ input {
       color: $state-danger-text;
     }
 }
+
+
+/*
+::placeholder {
+  color: blue;
+  font-size: 1.5em;
+}*/

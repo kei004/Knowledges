@@ -21,11 +21,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      if @room.atter == 1 
-        redirect_to discussion_path
-      elsif @room.atter == 2
-        redirect_to question_path 
-      end
+      redirect_to @room
     else
       flash[:danger] = 'Invalid'
       redirect_to roomhome_path
@@ -33,18 +29,16 @@ class RoomsController < ApplicationController
   end
 
   def discuss
-    if logged_in?
-      @user = current_user
-      @room = Room.find(params[:id])
-      @messages = @room.messages
-    end
+    @rooms = Room.all
   end
 
   def show 
     if logged_in?
-      @user = current_user
       @room = Room.find(params[:id])
+      @rooms = Room.all
       @messages = @room.messages
+      @users = User.where(id: current_user.id)
+      
     end
   end
 

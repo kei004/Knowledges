@@ -16,14 +16,13 @@ Rails.application.routes.draw do
   resources :users
   resource :categorys 
   resources :rooms
-  get 'rooms/new'
-  post 'mkroom', to:'rooms#create'
-  get 'rooms/:room_id' => 'rooms#discuss'
+  get 'roomhome',    to:'rooms#table'
+  post 'roomhome',    to:'rooms#create'
+  get 'rooms/:room_id' => 'rooms#show'
   get 'rooms/home'
 
   get '/note',        to:'rooms#note'
   get '/question',    to:'rooms#qa'
-  get '/roomhome',    to:'rooms#table'
   get '/discussion',  to:'rooms#discuss'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

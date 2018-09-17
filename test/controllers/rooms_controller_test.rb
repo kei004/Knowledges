@@ -1,13 +1,14 @@
 require 'test_helper'
 
 class RoomsControllerTest < ActionDispatch::IntegrationTest
+
   test "should get home" do
     get rooms_home_url
     assert_response :success
   end
 
   test "should get table" do
-    get room_path
+    get roomhome_path
     assert_response :success
   end
 
@@ -25,5 +26,4 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
     get discussion_path
     assert_response :success
   end
-
 end

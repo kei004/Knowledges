@@ -2,17 +2,12 @@
   <div class="alert alert-<%= message_type %>"><%= message %></div>
 <% end %>
 <div class = "Room-body">
-  <ul>
-    <% @rooms.each do |room| %>
-      <li><%=link_to "ROOM#{room.id}", "/rooms/#{room.id}/" %><p><%= "/rooms/room_#{room.id}"%></p></li>
-    <% end %>
-  </ul>
   <!--<li><%=link_to "NEW ROOM", "/rooms/new" %></li>-->
   <div class = "room-form">
-    <%= form_for(:room, url: mkroom_path) do |f| %>
+    <%= form_for(:room, url: roomhome_path) do |f| %>
 
       <%= f.label :種類 %>
-      <%= f.select :atter, [["議論", 1], ["質問", 2]],  :prompt => "選択してください"  %>
+      <%= f.select :atter, [["議論", 1], ["質問", 2]],  :prompt => "選択してください"%>
 
 
       <%= f.label :タイトル %>

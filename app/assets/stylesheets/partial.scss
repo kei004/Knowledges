@@ -12,7 +12,6 @@
     color:whitesmoke;
     position:relative;   
     text-decoration: none;
-    
     a{
         text-decoration: none;
         font-size: 85px;
@@ -38,7 +37,6 @@
     margin: 0;
     padding: 0;
     position:relative; 
-    
     ul{ 
         padding-top: 60px;
         padding-right: 40px;
@@ -78,10 +76,10 @@
 /* body */
 
 body{
-    /*background:linear-gradient(-45deg,  #A66AD7, #1A9FFF);*/
-    /*background:rgb(221, 231, 231);*/
+    background:linear-gradient(-45deg,  rgba(166, 106, 215, 0.432), rgba(26, 160, 255, 0.432));
+    /*background:rgb(221, 231, 231);
     background-image:url('Main.png');
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     margin: 0;
     padding: 0;
     /*background: linear-gradient(to left, rgba(219, 240, 223, .8), rgba(143, 167, 255, .8)),
