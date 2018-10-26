@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   get   '/signup',   to:'users#new'
   post   '/signup',   to:'users#create'
+  
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   get 'roomhome',    to:'rooms#table'
   post 'roomhome',    to:'rooms#create'
   get 'rooms/:room_id' => 'rooms#show'
-  get 'rooms/home'
+  get 'homes',         to:'rooms#home'
 
   get '/note',        to:'rooms#note'
   get '/question',    to:'rooms#qa'

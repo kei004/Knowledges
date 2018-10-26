@@ -9,7 +9,7 @@
     margin: 0px;
     padding: 60px;
     font-family: 'Times New Roman', sans-serif;
-    color:whitesmoke;
+    color:rgb(83, 71, 255);
     position:relative;   
     text-decoration: none;
     a{
@@ -25,7 +25,7 @@
         transform : translateY(-50%);
         
         vertical-align: middle;  
-        color:whitesmoke;
+        color:rgb(83, 71, 255);
         letter-spacing : 0.2em;
         text-decoration: none;
     }
@@ -57,7 +57,7 @@
             font-family: 'Arial',  sans-serif;
             font-size:20px;
             font-style: inherit;
-            color:whitesmoke;
+            color:rgb(83, 71, 255);
             height: inherit;
             
             a{
@@ -65,7 +65,7 @@
                 padding: 0;
                 height: inherit;
                 text-decoration: none;
-                color:whitesmoke;
+                color:rgb(83, 71, 255);
                 &:hover{
                     color: darkblue;
                 }
@@ -76,7 +76,7 @@
 /* body */
 
 body{
-    background:linear-gradient(-45deg,  rgba(166, 106, 215, 0.432), rgba(26, 160, 255, 0.432));
+    /*background:linear-gradient(-45deg,  rgba(63, 63, 63, 0.678), rgba(0, 0, 0, 0.829));*/
     /*background:rgb(221, 231, 231);
     background-image:url('Main.png');
     background-repeat: no-repeat;*/

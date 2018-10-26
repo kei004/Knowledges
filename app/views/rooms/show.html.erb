@@ -5,6 +5,7 @@
             <ul>トーク参加者
              <% @users.each do |user| %>
                 <li>   <%= user.name %></li>
+                <li> 1 <%= @room.user %></li>
              <% end %>
             </ul>
             <div id = "choice-form">
