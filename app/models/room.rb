@@ -1,7 +1,8 @@
 class Room < ApplicationRecord
-    has_many :messages
+    has_many :message
     has_many :user
-    has_many :chatstatus
+    has_many :roomgreps
+    has_many :chatstatu
     validates :atter, presence: true
     validates :title, presence: true, length: { maximum:200 }
     validates :choice_first, presence: true, length: { maximum:20 }
