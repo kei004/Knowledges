@@ -1,0 +1,2 @@
+class Roomgrep < ApplicationRecord
+end

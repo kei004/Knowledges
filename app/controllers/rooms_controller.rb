@@ -37,7 +37,8 @@ class RoomsController < ApplicationController
       @room = Room.find(params[:id])
       @rooms = Room.all
       @messages = @room.messages
-      @users = User.where(id: cookies.signed[:user_id])
+      #@users = User.where(id: params[:id])
+      @users = User.all
     end
   end
 
