@@ -12,7 +12,7 @@ class User < ApplicationRecord
   
     has_many :messages
     has_many :chatstatu
-    has_many :room ,optional:  true
+    belongs_to :room ,optional:  true
     #belongs_to :rooms, through: :roomgreps, optional: tru
 
     # 渡された文字列のハッシュ値を返す
