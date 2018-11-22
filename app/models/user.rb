@@ -10,11 +10,11 @@ class User < ApplicationRecord
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   
-    has_many :message
+    has_many :messages
     has_many :chatstatu
-    has_many :roomgreps
-    belongs_to :rooms, through: :roomgreps, optional: true
-  
+    has_many :room ,optional:  true
+    #belongs_to :rooms, through: :roomgreps, optional: tru
+
     # 渡された文字列のハッシュ値を返す
     def User.digest(string)
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
