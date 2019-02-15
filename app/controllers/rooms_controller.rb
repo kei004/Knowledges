@@ -35,7 +35,18 @@ class RoomsController < ApplicationController
   def show 
     if logged_in?
       @room = Room.find(params[:id])
-      @rooms = Room.all
+      if RoomGroup.exists?(user_id:current_user.id,room_id:@room.id)
+        @users = @room.users
+      else  
+        RoomGroup.create(user_id: current_user.id,room_id:@room.id )
+        @users = @room.users
+      end
+      #@groups = current_user.rooms
+      #@room.room_groups.create(user:@user)
+      #@users = @room.room_groups.where(id:@room.users)
+      #@u = @room.room_groups
+      #@h = User.where(id:@room.users.ids)
+      #@users = Room.room_groups.where()
       @messages = @room.messages
     end
   end

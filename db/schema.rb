@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_065634) do
+ActiveRecord::Schema.define(version: 2018_11_22_210356) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2018_10_10_065634) do
     t.integer "room_id"
     t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "room_groups", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_room_groups_on_room_id"
+    t.index ["user_id"], name: "index_room_groups_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -58,7 +67,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_065634) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_digest"
-    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

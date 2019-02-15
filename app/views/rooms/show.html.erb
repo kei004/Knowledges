@@ -2,7 +2,11 @@
     <h1><%=@room.title%></h1><h3>Room No.<%= @room.id %></h3>
     <div class = "chat-body" >
         <div id = "chat-atter">
-          
+            <ul>トーク参加者
+                <% @users.each do |u| %>
+                    <li>   <%= u.name %></li>
+                <% end %>
+            </ul>
             <div id = "choice-form">
                 <form>
                  <label>Button</label><br>

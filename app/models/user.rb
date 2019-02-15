@@ -12,8 +12,8 @@ class User < ApplicationRecord
   
     has_many :messages
     has_many :chatstatu
-    belongs_to :room ,optional:  true
-    #belongs_to :rooms, through: :roomgreps, optional: tru
+    has_many :room_groups
+    has_many :rooms,through: :room_groups
 
     # 渡された文字列のハッシュ値を返す
     def User.digest(string)
@@ -43,5 +43,5 @@ class User < ApplicationRecord
     def forget
       update_attribute(:remember_digest, nil)
     end
-  end
+end
   
