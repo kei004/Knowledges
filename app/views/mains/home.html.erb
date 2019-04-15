@@ -1,25 +1,28 @@
 <div class = "body-main">
-    <h1>Knowledge.</h1>
-    <h3>Diversified Knowledge Consolidation Community</h3>
-    <p>あなたの　知識　が きっかけ をつくる</p>
-    <ul>
-        <% if logged_in? %>
-        
-        <%else%>
-        <li><%= link_to "Sing up", signup_path %></li>
-        <li><%= link_to "Log in", login_path %></li>
-        <%end%>
-    </ul>
+    <div class = "main-left">
+        <h1>Knowledge.</h1>
+        <h3>Diversified Knowledge Consolidation Community</h3>
+        <p>あなたの　知識　が きっかけ をつくる</p>
+        <ul>
+            <% if logged_in? %>
+            
+            <%else%>
+            <li><%= link_to "Sing up", signup_path %></li>
+            <li><%= link_to "Log in", login_path %></li>
+            <%end%>
+        </ul>
+    </div>
+    <div class = "main-right">
+        <div id = "create">
+            <%= link_to "Create", '/roomhome' %>
+        </div>
+        <div id = "browse">
+            <%= link_to "Browse", '/discussion' %>
+        </div>
+    </div>
 </div>
 <div class = "contents">
     <% if logged_in? %>
-        
-        <div class = "rooms">
-            <ul>
-                <li class = "makeroom"><%= link_to "作成", '/roomhome' %></li>
-                <li class = "watchroom"><%= link_to "閲覧", '/discussion' %></li>
-            </ul>
-        </div>
         <div class = "contents-body">
             <div class = "contents-menu">
                 <ul>

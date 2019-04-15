@@ -1,5 +1,5 @@
 document.addEventListener 'turbolinks:load', ->
-    # viewの<div id="messages">から受け取る
+  # viewの<div id="messages">から受け取る
   if $('#messages').length > 0
     App.room = App.cable.subscriptions.create { channel: "RoomChannel", room_id: $('#messages').data('room_id') },
       connected: ->
@@ -12,8 +12,9 @@ document.addEventListener 'turbolinks:load', ->
         $('#messages').append data['message']
         $('#chat-contents').animate({scrollTop: $('#chat-contents')[0].scrollHeight}, 'fast');
 
-      speak: (message)->
-        @perform 'speak', message: message #@perform 'speak'でRoomChannelのspeakアクションが呼ばれる
+      
+      speak: (message,member)->
+        @perform 'speak', message: message, member:@user #@perform 'speak'でRoomChannelのspeakアクションが呼ばれる
     $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
       console.log("keypress OK")
       if event.keyCode is 13 # return = send

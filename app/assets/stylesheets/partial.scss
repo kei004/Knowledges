@@ -10,7 +10,7 @@
     padding: 60px;
     font-family: 'Times New Roman', sans-serif;
     /*color:rgb(83, 71, 255);*/
-    color:whitesmoke;
+    color:black;
     position:relative;   
     text-decoration: none;
     a{
@@ -27,9 +27,12 @@
         
         vertical-align: middle;  
         /*color:rgb(83, 71, 255);*/
-        color:whitesmoke;
+        color:black;
         letter-spacing : 0.2em;
         text-decoration: none;
+        &:hover{
+            text-decoration: none;
+        }
     }
 }
 .head-menu{
@@ -60,7 +63,7 @@
             font-size:20px;
             font-style: inherit;
             /*color:rgb(83, 71, 255);*/
-            color:whitesmoke;
+            color:black;
             height: inherit;
             
             a{
@@ -69,7 +72,7 @@
                 height: inherit;
                 text-decoration: none;
                 /*color:rgb(83, 71, 255);*/
-                color:whitesmoke;
+                color:black;
                 &:hover{
                     color: darkblue;
                 }
@@ -80,7 +83,8 @@
 /* body */
 
 body{
-    background:linear-gradient(-45deg,  rgba(249, 250, 252, 0.678), rgba(19, 25, 105, 0.829));
+    /*background:linear-gradient(-45deg,  rgba(249, 250, 252, 0.778), rgba(52, 19, 105, 1));*/
+    background: linear-gradient(218.66deg, #FFFFFF 28.07%, rgba(255, 255, 255, 0) 100%), linear-gradient(128.98deg, #481369 0%, rgba(52, 19, 105, 0) 100%);
     /*background:rgb(221, 231, 231);
     background-image:url('Main.png');
     background-repeat: no-repeat;*/
@@ -109,36 +113,5 @@ body{
         -ms-transform: translateY(-50%);
         -webkit-transform : translateY(-50%);
         transform : translateY(-50%);
-    }
-    ul {
-        padding: 0%;
-        margin: 0%;
-        font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
-        font-style: inherit;
-        position:absolute;
-        top: 50%;
-        right: 0%;
-        -ms-transform: translate(0%,-50%);
-        -webkit-transform : translate(0%,-50%);
-        transform : translate(0%,-50%);
-        
-        li {
-            display: inline;
-            list-style: none;
-            font-family: 'Segoe Print','Bradley Hand','Bradley Hand',  sans-serif;
-            font-style: inherit;
-            margin: 0% 8px;
-            a{
-                margin: 0%;
-                padding: 0%;
-                height: inherit;
-                text-decoration: none;
-                /*color: blue;*/
-                color:whitesmoke;
-                &:hover{
-                    color: darkblue;
-                }
-            }
-        }
     }
 }

@@ -8,102 +8,182 @@
 @import "bootstrap";
 
 .body-main {
-    margin: 0px;
-    padding: 0px;
-    width:100%;
+    margin:0px;
+    padding:0px;
     height:720px;
-    float: left;
+    width:100%;
     position:relative;
-    h1{
-        height:auto;
-        width:900px;
-        text-align: center;
-        font-family: 'Arial Black','DIN Condensed',  sans-serif;
-        font-size:120px;
-        font-style: inherit;
-        color: whitesmoke;
-        margin: auto;
-        padding:auto;
-        position:absolute;
-        top: 25%;
-        left: 50%;
-        -ms-transform: translate(-50%,-25%);
-        -webkit-transform : translate(-50%,-25%);
-        transform : translate(-50%,-25%);
-
-    }
-    h3 {
-        height:auto;
-        width:600px;
-        text-align: center;
-        font-family: 'Segoe Script','Bradley Hand',  sans-serif;
-        font-size:22px;
-        font-style: inherit;
-        color:whitesmoke;
+    
+    .main-left{
+        margin: 0px;
+        padding: 0px;
+        width:70%;
+        height:inherit;
+        float: left;
         
-        margin: 10px auto auto auto;
-        padding:auto;
-        position:absolute;
-        top: 65%;
-        left: 50%;
-        -ms-transform: translate(-50%,-65%);
-        -webkit-transform : translate(-50%,-65%);
-        transform : translate(-50%,-65%);
-
-    }
-    p {
-        height:auto;
-        width:900px;
-        text-align: center;
-        font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
-        font-size:23px;
-        font-style: inherit;
-        color:whitesmoke;
-        letter-spacing : 0.3em;
-        margin: 10px auto auto auto;
-        padding:auto;
-        position:absolute;
-        top: 72%;
-        left: 50%;
-        -ms-transform: translate(-50%,-72%);
-        -webkit-transform : translate(-50%,-72%);
-        transform : translate(-50%,-72%);
-    }
-    ul {
-        height:auto;
-        width:auto;
-        margin: 20px auto;
-        padding:auto;
-        position:absolute;
-        top: 88%;
-        left: 50%;
-        -ms-transform: translate(-50%,-88%);
-        -webkit-transform : translate(-50%,-88%);
-        transform : translate(-50%,-88%);
-        color:whitesmoke;
-        li {
-            display: inline;
+        h1{
+            height:auto;
+            width:900px;
             text-align: center;
-            font-family: 'Arial',  sans-serif;
-            font-size:20px;
+            font-family: 'Arial Black','DIN Condensed',  sans-serif;
+            font-size:120px;
             font-style: inherit;
-            background: #eeeded86;
-            letter-spacing : 0.1em;
-            margin: auto 30px;
-            padding:5px 40px;
-            border-radius: 10px;
-            border:solid 2px whitesmoke ;
-            list-style: none;
-            a{
-                text-decoration: none;
-                color:whitesmoke;
-                &:hover{
-                    color: darkblue;
+            color: black;
+            margin: auto;
+            padding:auto;
+            position:absolute;
+            top: 35%;
+            left: 35%;
+            -ms-transform: translate(-50%,-25%);
+            -webkit-transform : translate(-50%,-25%);
+            transform : translate(-50%,-25%);
+
+        }
+        h3 {
+            height:auto;
+            width:600px;
+            text-align: center;
+            font-family: 'Segoe Script','Bradley Hand',  sans-serif;
+            font-size:22px;
+            font-style: inherit;
+            color:black;
+            
+            margin: 10px auto auto auto;
+            padding:auto;
+            position:absolute;
+            top: 65%;
+            left: 45%;
+            -ms-transform: translate(-50%,-65%);
+            -webkit-transform : translate(-50%,-65%);
+            transform : translate(-50%,-65%);
+
+        }
+        p {
+            height:auto;
+            width:900px;
+            text-align: center;
+            font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+            font-size:23px;
+            font-style: inherit;
+            color:black;
+            letter-spacing : 0.3em;
+            margin: 10px auto auto auto;
+            padding:auto;
+            position:absolute;
+            top: 72%;
+            left: 45%;
+            -ms-transform: translate(-50%,-72%);
+            -webkit-transform : translate(-50%,-72%);
+            transform : translate(-50%,-72%);
+        }
+        ul {
+            height:auto;
+            width:auto;
+            margin: 20px auto;
+            padding:auto;
+            position:absolute;
+            top: 88%;
+            left: 50%;
+            -ms-transform: translate(-50%,-88%);
+            -webkit-transform : translate(-50%,-88%);
+            transform : translate(-50%,-88%);
+            color:black;
+            li {
+                display: inline;
+                text-align: center;
+                font-family: 'Arial',  sans-serif;
+                font-size:20px;
+                font-style: inherit;
+                background: #f1c4fa86;
+                letter-spacing : 0.1em;
+                margin: auto 30px;
+                padding:5px 40px;
+                border-radius: 10px;
+                border:solid 2px whitesmoke ;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color:rgb(94, 17, 81);
+                    &:hover{
+                        color: darkblue;
+                    }
                 }
+                /*&:hover {
+                    background:rgba(238, 236, 236, 0.719);
+                }*/
             }
-            /*&:hover {
-                background:rgba(238, 236, 236, 0.719);
-            }*/
+        }
+    }
+    .main-right{
+        margin: 0px;
+        padding: 0px;
+        width:30%;
+        height:inherit;
+        float: left;
+        position: relative;
+        #create {
+            
+            /*background: rgba(186, 186, 186, 0.192);*/
+            background:linear-gradient(231.05deg, rgb(236, 173, 241) -57.63%, #FFFFFF 100%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.23);
+            margin: 0px;
+            padding:0px;
+
+            width:90%;
+            height: 12%;
+            border-radius: 10px;
+            position: absolute;
+            top: 30%;
+            left: 0%;
+            -ms-transform: translate(-0%,-30%);
+            -webkit-transform : translate(-0%,-30%);
+            transform : translate(-0%,-30%);
+            &:hover{
+                background: rgba(170, 170, 170, 0.192)
+            }
+        }
+        #browse{
+            
+            /*background: rgba(170, 170, 170, 0.192);*/
+            background:linear-gradient(342.48deg, rgb(236, 173, 241) -57.63%, #FFFFFF 100%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.192);
+            margin: 0px;
+            padding:0px;
+
+            width:90%;
+            height: 12%;
+            border-radius: 10px;
+            position: absolute;
+            top: 48%;
+            left: 0%;
+            -ms-transform: translate(-0%,-48%);
+            -webkit-transform : translate(-0%,-48%);
+            transform : translate(-0%,-48%);
+            &:hover{
+                background: rgba(170, 170, 170, 0.192)
+            }
+        }
+        a{
+            font-family: 'Arial Black','DIN Condensed',  sans-serif;
+            font-size:23px;
+            font-style: inherit;
+            color:black;
+            position: absolute;
+            top: 45%;
+            left: 2%;
+            -ms-transform: translate(-2%,-45%);
+            -webkit-transform : translate(-2%,-45%);
+            transform : translate(-2%,-45%);
+            &:link{
+                color: black;
+                text-decoration: none;
+            }
+            &:hover{
+                text-decoration: none;
+                color: darkblue;
+            }
+
+            
         }
     }
 }
@@ -114,48 +194,6 @@
     background:white;
     padding: 80px;
     margin: 0;
-    .rooms {
-        width:100%;
-        height:auto;
-        padding: 0;
-        margin: 0 auto;
-        ul {
-            height:auto;   
-            width:100%;
-            margin:auto;
-            padding:auto;
-            display:flex;
-            justify-content: center;
-            li {
-                width: 150px;
-                height: 150px;
-                font-family: 'Arial',  sans-serif;
-                font-size:25px;
-                font-style: inherit;
-                margin:auto 80px;
-                padding-top:55px;
-                list-style: none;
-                border-radius: 50%;
-                text-align: center;
-                a {
-                    text-decoration: none;
-                    color:black;  
-                    &:hover{
-                        color:rgb(126, 124, 124);
-                    }
-                }
-                &:hover{
-                    background:rgb(228, 228, 228);
-                }
-            }
-            .makeroom {
-                background: #cce475;
-            }
-            .watchroom {
-                background: #71a3a3;
-            }
-        }
-    }
     .contents-body {
         width: 80%;
         height: 700px;
