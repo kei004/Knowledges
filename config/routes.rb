@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   #resource :categorys 
   resources :rooms
   resources :messages
-
   get 'roomhome',    to:'rooms#table'
   post 'roomhome',    to:'rooms#create'
   get 'rooms/:room_id' => 'rooms#show'

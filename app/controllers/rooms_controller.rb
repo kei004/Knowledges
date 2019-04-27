@@ -36,7 +36,6 @@ class RoomsController < ApplicationController
     if logged_in?
       @room = Room.find(params[:id])
       @messages = @room.messages
-      if @messages.user.
     end
   end
 
