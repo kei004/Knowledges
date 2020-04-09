@@ -1,0 +1,7 @@
+<li id="messagesmessages2">
+  <span class="user"><%= link_to messagesmessages2.user.name, messagesmessages2.user %></span>
+  <span class="content"><%= messagesmessages2.content%><%= messagesmessages2.room_id%></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(messagesmessages2.created_at) %> ago.
+  </span>
+</li>

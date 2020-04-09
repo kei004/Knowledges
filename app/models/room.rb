@@ -1,5 +1,7 @@
 class Room < ApplicationRecord
-    has_many :messages
+
+
+    has_many :messages, dependent: :destroy#dependentはルームが消えたら紐づけられたpostも消されるようにするため
     has_many :room_groups
     has_many :users,through: :room_groups
     has_many :chatstatu

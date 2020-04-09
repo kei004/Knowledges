@@ -21,6 +21,11 @@
             <div id = "tag">
                 <div class = "tag_nameplate">・Tag</div>
                 <div class = "tag_main"><%=@room.tag%></div>
+                 <ul>トーク参加者
+	                <% @users.each do |u| %>
+	                    <li>   <%= u.name %></li>
+	                <% end %>
+	            </ul>
             </div>
             <div id = "contents">
                 <div class = "contents_nameplate">・Contents</div>

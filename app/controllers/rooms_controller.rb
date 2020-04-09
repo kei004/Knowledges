@@ -36,6 +36,12 @@ class RoomsController < ApplicationController
     if logged_in?
       @room = Room.find(params[:id])
       @messages = @room.messages
+      if RoomGroup.exists?(user_id:current_user.id,room_id:@room.id)
+        @users = @room.users
+      else  
+        RoomGroup.create(user_id: current_user.id,room_id:@room.id )
+        @users = @room.users
+      end
     end
   end
 

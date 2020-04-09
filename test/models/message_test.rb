@@ -7,7 +7,7 @@ class MessageTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:michael)
-    @message = Message.new(content: "Lorem ipsum", user_id: @user.id)
+    @message = @user.messages.build(content: "Lorem ipsum")
   end
   test "should be valid" do
     assert @message.valid?
@@ -27,5 +27,4 @@ class MessageTest < ActiveSupport::TestCase
     @message.content = "a" * 141
     assert_not @message.valid?
   end
-
 end

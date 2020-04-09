@@ -6,7 +6,7 @@
         <ul>
             <% if logged_in? %>
              <li><%= link_to "HOME", root_path %></li>
-             <li><%= link_to "NY PAGE",user_url(current_user)%></li>
+             <li><%= link_to "MY PAGE",user_url(current_user)%></li>
              <li><%= link_to "ABOUT", about_path %></li>
              <li><%= link_to "HELP", '#' %></li>
             <% else %>

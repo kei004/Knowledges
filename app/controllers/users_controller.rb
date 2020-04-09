@@ -10,7 +10,9 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+      @user = User.find(params[:id])
+      @messages2 = @user.messages.paginate(page: params[:page])
+      @rooms = @user.rooms
   end
   
   def new
@@ -35,7 +37,7 @@ class UsersController < ApplicationController
   end
 
   def setting
-    @user = User.find(params[:id])
+  
   end
 
   def update

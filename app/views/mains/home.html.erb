@@ -13,12 +13,14 @@
         </ul>
     </div>
     <div class = "main-right">
+        <% if logged_in? %>
         <div id = "create">
             <%= link_to "Create", '/roomhome' %>
         </div>
         <div id = "browse">
             <%= link_to "Browse", '/discussion' %>
         </div>
+        <%end%>
     </div>
 </div>
 <div class = "contents">

@@ -18,7 +18,7 @@
         box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.1)
     }
     .col-md-4{
-        width: 80%;
+        width: 90%;
         height: inherit;
         margin: 0%;
         padding: 0%;
@@ -67,17 +67,17 @@
             #mypages{
                 margin: 50px auto ;
                 padding: 0;
-                width:95%;
+                width:100%;
                 height:600px;
-                background: white;
+                background: rgba(255, 255, 255, 0.89);
                 box-shadow: 2px 2px 10px 4px rgba(0,0,0,0.3);
-            
+                border-radius:6px;
                 display:flex;
                 justify-content: center;
-                color: blue;
+                
                 .mybox {
-                    margin: 0;
-                    padding:0;
+                    margin: auto;
+                    padding:auto;
                     height: inherit;
                     width: 100%;
                     .box-top{
@@ -91,7 +91,6 @@
                             font-family: 'Arial',  sans-serif;
                             font-size:30px;
                             font-style: inherit;
-                            color: blue;
                             text-align: center;
                         }
                     }
@@ -99,27 +98,53 @@
                         margin: auto;
                         padding: auto;
                         height:530px;
+                        overflow:auto;
+                        -webkit-overflow-scrolling: touch;
+                        ol{
+                            margin: auto;
+                            padding: auto;
+                            width:100%;
+                            #room{
+                                .count{
+                                    padding-left: 18px; 
+                                }
+                                .timestamp{
+                                    padding-left: 18px;
+                                }
+                                .title{
+                                    
+                                }
+                                border-bottom: #9ea1a7 solid 1px;
+                                
+                                list-style-position:inside;
+                                padding:5px 5px;
+                                margin: 5px 5px;
+                            }
+                        }
                     }
                 }
             
-                /*.discuss {
-                    padding:0px;
+                .discuss {
                     height: inherit;
-                    width: 33%;
-                    border: #6d95ce solid 2px;
+                    /*background-color: #b6d0f5;*/
+                    p{
+                        color:#4283dd;
+                    }
                 }
                 .quastion{
-                    padding:0%;
                     height: inherit;
-                    width:33%;
-                    border: #6d95ce solid 2px;
+                    /*background-color: #75acfa;*/
+                    p{
+                        color: #5e87c0;
+                    }
                 }
                 .note{
-                    padding:0%;
                     height: inherit;
-                    width:33%;
-                    border: #6d95ce solid 2px;
-                }*/
+                    /*background-color: #4283dd;*/
+                    p{
+                        color:#b6d0f5;
+                    }
+                }
             }
         }
     }

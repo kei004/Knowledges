@@ -1,0 +1,7 @@
+<li id="room">
+  <span class="title"><%= link_to room.title, room %></span>
+  <span class="count">コメント数  :<%= user.messages.count%></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(room.created_at) %> ago.
+  </span>
+</li>
